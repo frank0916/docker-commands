@@ -1,0 +1,60 @@
+https://docs.docker.com/get-started/
+https://docs.docker.com/language/nodejs/build-images/
+
+docker build --tag hello-world .
+#docker build --help
+
+docker images
+
+#docker run --help # to check opitons for -d, -dns -cups
+docker run hello-world
+
+docker ps
+docker ps -a
+
+docker rm image_name
+
+docker run-p 8080:80 --name hello -d hello-world
+#open a browser window with link http://localhost:8080
+
+docker stop hello
+docker start hello
+docker stop hello
+
+docker logs hello
+docker -f logs hello # -f stands for follow, control-c to stop following
+
+#sign in dockerhub and create a repository : frankhe0916/hellow-world
+docker push frankhe0916/hellow-world
+
+#tag the 
+docker tag frankhe0916/hello-world
+
+#push image to repository
+docker push frankhe0916/hellow-world
+
+#delete the local image
+docoker rmi frankhe0916/hello-world
+
+#pull the image back down
+docker pull frankhe0916/hello-world
+
+#display image that was downloaded from dockerhub
+docker images
+
+#create a docker-compose.yml
+#run docker-comouse command to compose a image
+#with -d option for detach and run in backgroup
+docker-compose up -d
+
+#tear down the composed image
+docker-compose down
+
+
+
+
+
+
+
+
+
